@@ -1,7 +1,7 @@
 class Discount < ApplicationRecord
-  validates_presence_of :percentage, :quantity
-  validates_numericality_of :percentage, :quantity
-  
+  validates_presence_of :percentage, :threshold
+  validates_numericality_of :percentage, :threshold
+
   belongs_to :merchant
 
 end
