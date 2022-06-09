@@ -1,5 +1,5 @@
 class DiscountsController < ApplicationController
-  before_action :find_merchant, only: [:index, :show, :new, :create]
+  before_action :find_merchant, only: [:index, :show, :new, :create, :destroy]
 
   def index
   end
@@ -14,6 +14,12 @@ class DiscountsController < ApplicationController
 
   def create
     @merchant.discounts.create!(discount_params)
+    redirect_to merchant_discounts_path(@merchant)
+  end
+
+  def destroy
+    discount = Discount.find_by(merchant_id: params[:merchant_id], id: params[:id])
+    discount.destroy
     redirect_to merchant_discounts_path(@merchant)
   end
 
