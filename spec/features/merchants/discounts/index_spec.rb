@@ -12,8 +12,34 @@ describe 'Merchant Bulk Discounts Index' do
   end
 
   it "lists all of the merchant's bulk discounts, including percentage discount and quantity thresholds" do
+
     expect(page).to have_content("20% off 2 of the same item")
     expect(page).to have_content("35% off 3 of the same item")
     expect(page).to have_content("50% off 4 of the same item")
   end
+
+
+  it "links to the show page for each discount" do
+
+    within "#discount-#{@discount_1.id}" do
+      click_link("Details")
+
+      expect(current_path).to eq(merchant_discount_path(@rei, @discount_1))
+    end
+
+    visit merchant_discounts_path(@rei)
+    within "#discount-#{@discount_2.id}" do
+      click_link("Details")
+
+      expect(current_path).to eq(merchant_discount_path(@rei, @discount_2))
+    end
+
+    visit merchant_discounts_path(@rei)
+    within "#discount-#{@discount_3.id}" do
+      click_link("Details")
+
+      expect(current_path).to eq(merchant_discount_path(@rei, @discount_3))
+    end
+  end
+
 end
