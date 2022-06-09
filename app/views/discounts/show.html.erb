@@ -1,0 +1,8 @@
+<%= render '/partials/navbar_merchant' %><br>
+<%= render 'partials/two_columns' %>
+
+<h2> Bulk Discount Details: </h2>
+<ul>
+  <li> <b>Quantity Threshold:</b> <%= @discount.threshold %> items </li>
+  <li> <b>Percentage Discount:</b> <%= @discount.percentage%>% </li>
+</ul>
