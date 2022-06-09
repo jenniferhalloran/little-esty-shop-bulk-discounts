@@ -1,0 +1,7 @@
+<%= render '/partials/navbar_merchant' %><br>
+<%= render 'partials/two_columns' %>
+
+<h2> Current Bulk Discounts: </h2>
+<ul> <% @merchant.discounts.each do |discount| %>
+  <li> <%= discount.percentage %>% off <%= discount.threshold %> of the same item</li>
+<% end %></ul>
