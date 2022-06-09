@@ -1,0 +1,8 @@
+<%= render '/partials/navbar_merchant' %><br>
+<%= render 'partials/two_columns' %>
+
+<h2> Edit Bulk Discount: </h2>
+
+<%= render partial: 'form', locals: { url: merchant_discount_path,
+                                      class: 'discount_form',
+                                      local: true} %>
