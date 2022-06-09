@@ -6,4 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'csv'
+@rei = Merchant.create!(name: "REI")
+
+@discount_1 = @rei.discounts.create!(percentage: 20, threshold: 2)
+@discount_2 = @rei.discounts.create!(percentage: 35, threshold: 3)
+@discount_3 = @rei.discounts.create!(percentage: 50, threshold: 4)
