@@ -42,4 +42,10 @@ describe 'Merchant Bulk Discounts Index' do
     end
   end
 
+  it "links to a page to create a new discount" do
+    click_link "Add New Bulk Discount"
+
+    expect(current_path).to eq(new_merchant_discount_path(@rei))
+    expect(page).to have_content("Create New Bulk Discount")
+  end
 end
