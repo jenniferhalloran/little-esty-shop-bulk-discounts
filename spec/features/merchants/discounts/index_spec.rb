@@ -48,4 +48,16 @@ describe 'Merchant Bulk Discounts Index' do
     expect(current_path).to eq(new_merchant_discount_path(@rei))
     expect(page).to have_content("Create New Bulk Discount")
   end
+
+  it "displays a link to delete each bulk discount" do
+
+    expect(page).to have_content("20% off 2 of the same item")
+
+    within "#discount-#{@discount_1.id}" do
+      click_link("Delete")
+    end
+
+    expect(current_path).to eq(merchant_discounts_path(@rei))
+    expect(page).to_not have_content("20% off 2 of the same item")
+  end
 end
