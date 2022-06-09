@@ -21,7 +21,7 @@ describe 'Merchant Bulk Discount Show' do
 
   it "displays a link to update the bulk discount's details" do
     click_link "Edit This Bulk Discount"
-    save_and_open_page
+    
     expect(current_path).to eq(edit_merchant_discount_path(@rei, @discount_1))
     expect(current_path).to_not eq(edit_merchant_discount_path(@rei, @discount_2))
     expect(page).to have_content("Edit Bulk Discount:")
