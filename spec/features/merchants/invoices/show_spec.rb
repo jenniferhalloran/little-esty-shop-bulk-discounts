@@ -8,6 +8,7 @@ RSpec.describe "Merchant Invoices Show Page" do
     @item1 = @merchant1.items.create!(name: "Boots", description: "Never get blisters again!", unit_price: 135)
     @item2 = @merchant1.items.create!(name: "Tent", description: "Will survive any storm", unit_price: 219.99)
     @item3 = @merchant1.items.create!(name: "Backpack", description: "Can carry all your hiking snacks", unit_price: 99)
+    @item4 = @merchant2.items.create!(name: "Socks", description: "Oooooh, wool", unit_price: 15)
     # @item4 = @merchant1.items.create!(name: "Socks", description: "Oooooh, wool", unit_price: 15)
     # @item5 = @merchant2.items.create!(name: "Nalgene", description: "Put all your cool stickers here", unit_price: 12)
     # @item6 = @merchant2.items.create!(name: "Fanny Pack", description: "Forget what the haters say, they're stylish", unit_price: 25)
@@ -22,11 +23,12 @@ RSpec.describe "Merchant Invoices Show Page" do
     @invoice_item1 = InvoiceItem.create!(item_id: @item1.id, invoice_id: @invoice1.id, quantity: 5, unit_price: 100, status: "packaged")
     @invoice_item2 = InvoiceItem.create!(item_id: @item2.id, invoice_id: @invoice2.id, quantity: 3, unit_price: 250, status: "pending")
     @invoice_item3 = InvoiceItem.create!(item_id: @item3.id, invoice_id: @invoice1.id, quantity: 9, unit_price: 80, status: "packaged")
+    @invoice_item4 = InvoiceItem.create!(item_id: @item4.id, invoice_id: @invoice1.id, quantity: 9, unit_price: 80, status: "packaged")
 
     visit merchant_invoice_path(@merchant1, @invoice1)
   end
 
-  it "displays the discounted revenue of items sold on the invoice", :vcr do
+  xit "displays the discounted revenue of items sold on the invoice", :vcr do
     @merchant1.discounts.create!(percentage: 10, threshold: 2)
     @merchant1.discounts.create!(percentage: 20, threshold: 6)
     @merchant2.discounts.create!(percentage: 30, threshold: 4)
@@ -35,9 +37,9 @@ RSpec.describe "Merchant Invoices Show Page" do
 
   end
 
-  it "displays the total revenue of items sold on the invoice", :vcr do
-
-    expect(page).to have_content("Total Revenue: $1,220.00")
+  it "displays the merchant's total revenue of items sold on the invoice", :vcr do
+    expect(page).to have_content("REI's Total Revenue: $1,220.00")
+    expect(page).to_not have_content("REI's Total Revenue: $1,940.00")
   end
 
   it "displays an invoice's attributes", :vcr do

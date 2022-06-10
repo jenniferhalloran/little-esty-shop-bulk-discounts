@@ -15,8 +15,18 @@ class Invoice < ApplicationRecord
   end
 
   def total_revenue
-    invoice_items.sum('invoice_items.unit_price * invoice_items.quantity')
+    invoice_items.sum('unit_price * quantity')
   end
+
+  def merchants_revenue(merchant)
+    merchant.invoice_items
+            .joins(:invoice).where("invoices.id = ?", id)
+            .sum('invoice_items.unit_price * invoice_items.quantity')
+  end
+
+  # def discounted_revenue
+  #   require "pry"; binding.pry
+  # end
 
   def self.incomplete_invoices
     joins(:invoice_items)
