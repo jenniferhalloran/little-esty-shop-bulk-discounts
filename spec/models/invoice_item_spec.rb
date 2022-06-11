@@ -16,7 +16,7 @@ RSpec.describe InvoiceItem do
 
   describe 'instance methods' do
     describe 'applied discount' do
-      xit "finds the best applicable discount for an invoice item" do
+      it "finds the best applicable discount for an invoice item" do
         merchant1 = Merchant.create!(name: "REI")
         merchant2 = Merchant.create!(name: "Target")
 
@@ -38,9 +38,10 @@ RSpec.describe InvoiceItem do
         invoice_item3 = InvoiceItem.create!(item_id: item3.id, invoice_id: invoice1.id, quantity: 9, unit_price: 80, status: "packaged") #discount 2 applied
 
 
-        expect(invoice_item1.applied_discount). to eq(10)
-        expect(invoice_item2.applied_discount). to eq(nil)
-        expect(invoice_item3.applied_discount). to eq(20)
+        expect(invoice_item1.applied_discount).to eq(10)
+        expect(invoice_item2.applied_discount).to eq(nil)
+        expect(invoice_item3.applied_discount).to eq(20)
+        expect(invoice_item3.applied_discount).to_not eq(10)
 
       end
     end
