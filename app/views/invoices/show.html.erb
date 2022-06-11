@@ -9,8 +9,8 @@
     <div class="customer">
       <b>Customer Name:</b> <%= @invoice.invoice_customer %><br><br>
   </div>
-<p><b>Total Revenue:</b> <%= number_to_currency(@invoice.total_revenue) %></p>
-<p><b>Discounted Revenue:</b> <%= number_to_currency(@invoice.total_revenue) %></p>
+<p><b> <%= @merchant.name %>'s Total Revenue:</b> <%= number_to_currency(@invoice.merchants_revenue(@merchant.id)) %></p>
+<p><b> <%= @merchant.name %>'s Discounted Revenue:</b> <%= number_to_currency(@invoice.merchants_discounted_revenue(@merchant.id)) %></p>
 </div>
 
   <div class="column">
