@@ -12,7 +12,7 @@ describe 'Merchant Bulk Discounts Index' do
   end
 
   it "lists all of the merchant's bulk discounts, including percentage discount and quantity thresholds", :vcr do
-    
+
     expect(page).to have_content("20% off 2 of the same item")
     expect(page).to have_content("35% off 3 of the same item")
     expect(page).to have_content("50% off 4 of the same item")
@@ -63,5 +63,10 @@ describe 'Merchant Bulk Discounts Index' do
 
   it "displays the next three upcoming US holidays", :vcr do
 
+    expect(page).to have_content("Upcoming US Holidays:")
+    
+    expect(page).to have_content("Juneteenth, 2022-06-20")
+    expect(page).to have_content("Independence Day, 2022-07-04")
+    expect(page).to have_content("Labour Day, 2022-09-05")
   end
 end
