@@ -1,0 +1,198 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://date.nager.at/api/v3/NextPublicHolidays/us
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 11 Jun 2022 21:28:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Supported-Versions:
+      - 1.0, 2.0, 3.0
+      Cache-Control:
+      - max-age=28800
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '1665'
+      Last-Modified:
+      - Sat, 11 Jun 2022 21:00:58 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=abicbMMM%2F5MtuXpX9fdjTfFd7rolXp38ZSnXXP273Be2%2Fek3k3A6jDCjErNZQUXHxipb0FC4ZLx8ZMaku9APzxtxnelUcpZVbqco%2FK0k8Yoly8SMfJCXzNCZMYqsMuSP"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 719d70283e108c09-EWR
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"date":"2022-06-20","localName":"Juneteenth","name":"Juneteenth","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":2021,"types":["Public"]},{"date":"2022-07-04","localName":"Independence
+        Day","name":"Independence Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2022-09-05","localName":"Labor
+        Day","name":"Labour Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2022-10-10","localName":"Columbus
+        Day","name":"Columbus Day","countryCode":"US","fixed":false,"global":false,"counties":["US-AL","US-AZ","US-CO","US-CT","US-DC","US-GA","US-ID","US-IL","US-IN","US-IA","US-KS","US-KY","US-LA","US-ME","US-MD","US-MA","US-MS","US-MO","US-MT","US-NE","US-NH","US-NJ","US-NM","US-NY","US-NC","US-OH","US-OK","US-PA","US-RI","US-SC","US-TN","US-UT","US-VA","US-WV"],"launchYear":null,"types":["Public"]},{"date":"2022-11-11","localName":"Veterans
+        Day","name":"Veterans Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2022-11-24","localName":"Thanksgiving
+        Day","name":"Thanksgiving Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":1863,"types":["Public"]},{"date":"2022-12-26","localName":"Christmas
+        Day","name":"Christmas Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-01-02","localName":"New
+        Year''s Day","name":"New Year''s Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-01-16","localName":"Martin
+        Luther King, Jr. Day","name":"Martin Luther King, Jr. Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-02-20","localName":"Presidents
+        Day","name":"Washington''s Birthday","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-04-07","localName":"Good
+        Friday","name":"Good Friday","countryCode":"US","fixed":false,"global":false,"counties":["US-CT","US-DE","US-HI","US-IN","US-KY","US-LA","US-NC","US-ND","US-NJ","US-TN"],"launchYear":null,"types":["Public"]},{"date":"2023-05-29","localName":"Memorial
+        Day","name":"Memorial Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]}]'
+  recorded_at: Sat, 11 Jun 2022 21:28:43 GMT
+- request:
+    method: get
+    uri: https://date.nager.at/api/v3/NextPublicHolidays/us
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 11 Jun 2022 21:28:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Supported-Versions:
+      - 1.0, 2.0, 3.0
+      Cache-Control:
+      - max-age=28800
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '377'
+      Last-Modified:
+      - Sat, 11 Jun 2022 21:22:26 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8m7UMblUQD8Zu6aDyE2z8ZFNqiwXTUOtBcO0xfPeZuGSw0Q%2BITIAhaAvYZlrN4wCdGj7oQiINrvQjIfaqZUV0Xu1M7%2Bp6hIxo2Gn9ilQnx8TTgJTZYqkIK0vCKqDKnjx"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 719d7028b99e1a0b-EWR
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"date":"2022-06-20","localName":"Juneteenth","name":"Juneteenth","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":2021,"types":["Public"]},{"date":"2022-07-04","localName":"Independence
+        Day","name":"Independence Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2022-09-05","localName":"Labor
+        Day","name":"Labour Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2022-10-10","localName":"Columbus
+        Day","name":"Columbus Day","countryCode":"US","fixed":false,"global":false,"counties":["US-AL","US-AZ","US-CO","US-CT","US-DC","US-GA","US-ID","US-IL","US-IN","US-IA","US-KS","US-KY","US-LA","US-ME","US-MD","US-MA","US-MS","US-MO","US-MT","US-NE","US-NH","US-NJ","US-NM","US-NY","US-NC","US-OH","US-OK","US-PA","US-RI","US-SC","US-TN","US-UT","US-VA","US-WV"],"launchYear":null,"types":["Public"]},{"date":"2022-11-11","localName":"Veterans
+        Day","name":"Veterans Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2022-11-24","localName":"Thanksgiving
+        Day","name":"Thanksgiving Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":1863,"types":["Public"]},{"date":"2022-12-26","localName":"Christmas
+        Day","name":"Christmas Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-01-02","localName":"New
+        Year''s Day","name":"New Year''s Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-01-16","localName":"Martin
+        Luther King, Jr. Day","name":"Martin Luther King, Jr. Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-02-20","localName":"Presidents
+        Day","name":"Washington''s Birthday","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-04-07","localName":"Good
+        Friday","name":"Good Friday","countryCode":"US","fixed":false,"global":false,"counties":["US-CT","US-DE","US-HI","US-IN","US-KY","US-LA","US-NC","US-ND","US-NJ","US-TN"],"launchYear":null,"types":["Public"]},{"date":"2023-05-29","localName":"Memorial
+        Day","name":"Memorial Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]}]'
+  recorded_at: Sat, 11 Jun 2022 21:28:43 GMT
+- request:
+    method: get
+    uri: https://date.nager.at/api/v3/NextPublicHolidays/us
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 11 Jun 2022 21:28:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Supported-Versions:
+      - 1.0, 2.0, 3.0
+      Cache-Control:
+      - max-age=28800
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '377'
+      Last-Modified:
+      - Sat, 11 Jun 2022 21:22:26 GMT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WZBc4FVUnAQM%2FBQNmz9%2FDfoKyGF86VDc9%2FW2UaAilFtI9T4d9nhAxvAZvHIFemcA2oidQWKtgq0AaQao2lNg%2Bsh20rpBnfj6rK%2F5WJnYR5i%2Bfx%2F61friJacLZwTr6MDT"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 719d7029b88d1a24-EWR
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"date":"2022-06-20","localName":"Juneteenth","name":"Juneteenth","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":2021,"types":["Public"]},{"date":"2022-07-04","localName":"Independence
+        Day","name":"Independence Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2022-09-05","localName":"Labor
+        Day","name":"Labour Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2022-10-10","localName":"Columbus
+        Day","name":"Columbus Day","countryCode":"US","fixed":false,"global":false,"counties":["US-AL","US-AZ","US-CO","US-CT","US-DC","US-GA","US-ID","US-IL","US-IN","US-IA","US-KS","US-KY","US-LA","US-ME","US-MD","US-MA","US-MS","US-MO","US-MT","US-NE","US-NH","US-NJ","US-NM","US-NY","US-NC","US-OH","US-OK","US-PA","US-RI","US-SC","US-TN","US-UT","US-VA","US-WV"],"launchYear":null,"types":["Public"]},{"date":"2022-11-11","localName":"Veterans
+        Day","name":"Veterans Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2022-11-24","localName":"Thanksgiving
+        Day","name":"Thanksgiving Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":1863,"types":["Public"]},{"date":"2022-12-26","localName":"Christmas
+        Day","name":"Christmas Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-01-02","localName":"New
+        Year''s Day","name":"New Year''s Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-01-16","localName":"Martin
+        Luther King, Jr. Day","name":"Martin Luther King, Jr. Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-02-20","localName":"Presidents
+        Day","name":"Washington''s Birthday","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-04-07","localName":"Good
+        Friday","name":"Good Friday","countryCode":"US","fixed":false,"global":false,"counties":["US-CT","US-DE","US-HI","US-IN","US-KY","US-LA","US-NC","US-ND","US-NJ","US-TN"],"launchYear":null,"types":["Public"]},{"date":"2023-05-29","localName":"Memorial
+        Day","name":"Memorial Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]}]'
+  recorded_at: Sat, 11 Jun 2022 21:28:43 GMT
+recorded_with: VCR 6.1.0

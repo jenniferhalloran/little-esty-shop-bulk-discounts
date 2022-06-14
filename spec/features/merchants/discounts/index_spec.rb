@@ -11,15 +11,15 @@ describe 'Merchant Bulk Discounts Index' do
     visit merchant_discounts_path(@rei)
   end
 
-  it "lists all of the merchant's bulk discounts, including percentage discount and quantity thresholds" do
-
+  it "lists all of the merchant's bulk discounts, including percentage discount and quantity thresholds", :vcr do
+    
     expect(page).to have_content("20% off 2 of the same item")
     expect(page).to have_content("35% off 3 of the same item")
     expect(page).to have_content("50% off 4 of the same item")
   end
 
 
-  it "links to the show page for each discount" do
+  it "links to the show page for each discount", :vcr do
 
     within "#discount-#{@discount_1.id}" do
       click_link("Details")
@@ -42,14 +42,14 @@ describe 'Merchant Bulk Discounts Index' do
     end
   end
 
-  it "links to a page to create a new discount" do
+  it "links to a page to create a new discount", :vcr do
     click_link "Add New Bulk Discount"
 
     expect(current_path).to eq(new_merchant_discount_path(@rei))
     expect(page).to have_content("Create New Bulk Discount")
   end
 
-  it "displays a link to delete each bulk discount" do
+  it "displays a link to delete each bulk discount", :vcr do
 
     expect(page).to have_content("20% off 2 of the same item")
 
@@ -59,5 +59,9 @@ describe 'Merchant Bulk Discounts Index' do
 
     expect(current_path).to eq(merchant_discounts_path(@rei))
     expect(page).to_not have_content("20% off 2 of the same item")
+  end
+
+  it "displays the next three upcoming US holidays", :vcr do
+
   end
 end

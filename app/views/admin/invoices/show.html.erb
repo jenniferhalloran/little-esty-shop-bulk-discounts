@@ -5,6 +5,8 @@
 <b>Created at:</b> <%= @invoice.created_at.strftime("%A, %B %d, %Y") %><br>
 <div class="customer">
   <b>Customer Name:</b> <%= @invoice.invoice_customer %><br><br>
+  <p><b>Total Revenue:</b> <%= number_to_currency(@invoice.total_revenue) %></p>
+  <p><b>Discounted Revenue:</b> <%= number_to_currency(@invoice.total_discounted_revenue) %></p>
 </div>
 
 <h2>Invoice Items</h2>
@@ -24,5 +26,3 @@
   <hr>
   <% end %>
 </div>
-
-<p><b>Total Revenue:</b> <%= number_to_currency(@invoice.total_revenue) %></p>

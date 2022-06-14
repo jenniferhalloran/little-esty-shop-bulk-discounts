@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
     @item = Item.find(params[:id])
   end
 
+  def find_discount
+    @discount = Discount.find(params[:id])
+  end
+  
 end

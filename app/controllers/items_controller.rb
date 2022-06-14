@@ -7,15 +7,12 @@ class ItemsController < ApplicationController
   end
 
   def show
-
   end
 
   def edit
-
   end
 
   def new
-
   end
 
   def create
@@ -33,7 +30,6 @@ class ItemsController < ApplicationController
         redirect_to merchant_item_path(@merchant, @item)
       else
         flash[:message] = 'Please fill out all fields to update this item!'
-        # render :new not sure why this doesn't work here
         redirect_to edit_merchant_item_path(@merchant, @item)
       end
     end
@@ -41,7 +37,6 @@ class ItemsController < ApplicationController
 
 
  private
-
   def item_params
     params.permit(:name, :description, :unit_price)
   end

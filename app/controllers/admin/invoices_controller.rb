@@ -15,8 +15,8 @@ class Admin::InvoicesController < ApplicationController
     redirect_to admin_invoice_path(invoice)
   end
 
-  private
-    def invoice_item_params
-      params.permit(:status)
-    end
+private
+  def invoice_item_params
+    params.permit(:status)
+  end
 end
