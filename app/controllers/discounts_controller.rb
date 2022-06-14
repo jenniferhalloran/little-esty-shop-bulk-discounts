@@ -3,6 +3,7 @@ class DiscountsController < ApplicationController
   before_action :find_discount, only: [:show, :edit, :update]
 
   def index
+    @parsed_holidays = HolidayFacade.create_holiday
   end
 
   def show
@@ -13,8 +14,14 @@ class DiscountsController < ApplicationController
   end
 
   def create
-    @merchant.discounts.create!(discount_params)
-    redirect_to merchant_discounts_path(@merchant)
+    discount = @merchant.discounts.create(discount_params)
+
+    if discount.save
+      redirect_to merchant_discounts_path(@merchant)
+    else
+      redirect_to new_merchant_discount_path(@merchant)
+      flash[:alert] = "Please enter a valid discount between 1 - 99%"
+    end
   end
 
   def destroy

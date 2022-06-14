@@ -12,4 +12,10 @@
 <% end %></ul>
 <hr>
 
+<h4> Upcoming US Holidays: </h4>
+<ol> <% @parsed_holidays.each do |holiday| %>
+  <li> <b><%= holiday.name %></b>, <i><%= holiday.date %></i> </li>
+  <% end %> </ol>
+<hr>
+
 <%= link_to "Add New Bulk Discount", new_merchant_discount_path(@merchant) %>
