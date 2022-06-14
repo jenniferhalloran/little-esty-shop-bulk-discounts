@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'welcome#index'
   get '/merchants/:merchant_id/dashboard', to: 'merchants#show'
 
 

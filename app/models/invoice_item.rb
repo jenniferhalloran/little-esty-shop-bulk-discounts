@@ -10,15 +10,11 @@ class InvoiceItem < ApplicationRecord
 
   enum status: {'pending' => 0, 'shipped' => 1, 'packaged' => 2}
 
-  def percentage_applied
-    applied_discount.percentage
-  end
-
   def applied_discount
     discounts
     .where("discounts.threshold <= ?", quantity)
     .order("percentage")
-    .first
+    .last
   end
 
   def has_discount?
