@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 11 Jun 2022 21:28:43 GMT
+      - Tue, 14 Jun 2022 17:26:09 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,13 +33,13 @@ http_interactions:
       Cf-Cache-Status:
       - HIT
       Age:
-      - '59'
+      - '28656'
       Last-Modified:
-      - Sat, 11 Jun 2022 21:27:44 GMT
+      - Tue, 14 Jun 2022 09:28:32 GMT
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3c5QSpjaC6o7XBZumDtGUhVlWtDt3aT8TfSDTsxBvzue3UYIOLA5z4AfyEFSc56OUOx%2BubKeB7hGPUscNFsZR0ULwzYsBmgYTGfRX9DAO2TK%2BCm69yGaexGincvLhmP%2F"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1xV%2FWDf8x6ASW4%2FKqjDfSwSkxolHV4sRd8rYBPkGU8PnfWha3PmNFzfIt7DGvyfvUydiu1%2BU6XnuXHH%2F6mZNQNbdfjdk2aCRL6lQyF8yZjztsb6lSMEeJqMY9%2FXY9eA%2FlslVG0ra1Sbw%2BGT3"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Vary:
@@ -47,7 +47,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 719d7025b8f517b9-EWR
+      - 71b4c4f23887e841-EWR
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -64,5 +64,5 @@ http_interactions:
         Day","name":"Washington''s Birthday","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]},{"date":"2023-04-07","localName":"Good
         Friday","name":"Good Friday","countryCode":"US","fixed":false,"global":false,"counties":["US-CT","US-DE","US-HI","US-IN","US-KY","US-LA","US-NC","US-ND","US-NJ","US-TN"],"launchYear":null,"types":["Public"]},{"date":"2023-05-29","localName":"Memorial
         Day","name":"Memorial Day","countryCode":"US","fixed":false,"global":true,"counties":null,"launchYear":null,"types":["Public"]}]'
-  recorded_at: Sat, 11 Jun 2022 21:28:43 GMT
+  recorded_at: Tue, 14 Jun 2022 17:26:08 GMT
 recorded_with: VCR 6.1.0
