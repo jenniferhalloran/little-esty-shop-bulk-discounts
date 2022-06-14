@@ -78,7 +78,7 @@ describe Invoice do
     end
 
     describe 'total_discount_provided' do
-      xit 'the returns the discount that is provided by all merchants on an invoice' do
+      it 'the returns the discount that is provided by all merchants on an invoice' do
 
         expect(@invoice1.total_discount_provided).to eq(222.8)
       end
@@ -93,7 +93,7 @@ describe Invoice do
     end
 
     describe 'total_discounted_revenue' do
-      xit 'returns the revenue of all merchants after discounts are applied' do
+      it 'returns the revenue of all merchants after discounts are applied' do
 
         expect(@invoice1.total_discounted_revenue).to eq(1093.2)
       end

@@ -16,7 +16,7 @@ RSpec.describe InvoiceItem do
 
   describe 'instance methods' do
 
-    describe 'applied discount' do
+    describe 'applied discount and percentage_applied' do
       it "finds the best applicable discount for an invoice item" do
         merchant1 = Merchant.create!(name: "REI")
         merchant2 = Merchant.create!(name: "Target")
@@ -30,19 +30,22 @@ RSpec.describe InvoiceItem do
         invoice1 = customer1.invoices.create!(status: "in progress")
         invoice2 = customer2.invoices.create!(status: "completed")
 
-        merchant1.discounts.create!(percentage: 10, threshold: 3) #discount 1
-        merchant1.discounts.create!(percentage: 20, threshold: 6) #discount 2
-        merchant2.discounts.create!(percentage: 30, threshold: 4) #discount 3
+        discount1 = merchant1.discounts.create!(percentage: 10, threshold: 3) #discount 1
+        discount2 = merchant1.discounts.create!(percentage: 20, threshold: 6) #discount 2
+        discount3 = merchant2.discounts.create!(percentage: 30, threshold: 4) #discount 3
 
         invoice_item1 = InvoiceItem.create!(item_id: item1.id, invoice_id: invoice1.id, quantity: 5, unit_price: 100, status: "packaged")#discount 1 applied
         invoice_item2 = InvoiceItem.create!(item_id: item2.id, invoice_id: invoice2.id, quantity: 2, unit_price: 250, status: "pending") #no discount applied
         invoice_item3 = InvoiceItem.create!(item_id: item3.id, invoice_id: invoice1.id, quantity: 9, unit_price: 80, status: "packaged") #discount 2 applied
 
 
-        expect(invoice_item1.applied_discount).to eq(10)
+        expect(invoice_item1.applied_discount).to eq(discount1)
+        # expect(invoice_item1.percentage_applied).to eq(10)
         expect(invoice_item2.applied_discount).to eq(nil)
-        expect(invoice_item3.applied_discount).to eq(20)
-        expect(invoice_item3.applied_discount).to_not eq(10)
+        # expect(invoice_item2.percentage_applied).to eq(nil)
+        expect(invoice_item3.applied_discount).to eq(discount2)
+        # expect(invoice_item3.percentage_applied).to eq(20)
+
 
       end
     end

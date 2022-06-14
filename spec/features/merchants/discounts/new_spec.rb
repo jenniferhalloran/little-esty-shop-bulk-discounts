@@ -6,7 +6,7 @@ describe 'Merchant Discount new page' do
     visit new_merchant_discount_path(@rei)
   end
 
-  it 'allows the user to create a discount' do
+  it 'allows the user to create a discount', :vcr do
     visit merchant_discounts_path(@rei)
 
     expect(page).to_not have_content("25% off 5 of the same item")
